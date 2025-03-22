@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Article Summarizer</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+    <div id="summarizer" class="tab-content active">
+        <h1>Article Summarizer</h1>
+        <button id="summarize-button">Summarize This Page</button>
+        <div id="result"></div>
+    </div>
+
+    <div id="chat" class="tab-content">
+        <h1>Chat with Gemini</h1>
+        <small class="context-note">You can ask questions about this webpage or anything else!</small>
+        <div id="chat-messages"></div>
+        <div class="chat-input">
+            <textarea id="chat-input" placeholder="Ask about the page or anything else..."></textarea>
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

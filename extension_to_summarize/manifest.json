@@ -1,0 +1,26 @@
+{
+    "name": "Article Summarizer Extension",
+    "description": "A Chrome extension that summarizes long articles into a paragraph using Gemini API.",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "tabs"
+    ],
+    "host_permissions": [
+        "https://generativelanguage.googleapis.com/*"
+    ],
+    "background": {
+        "service_worker": "src/background/background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["src/content/content.js"]
+        }
+    ],
+    "action": {
+        "default_popup": "src/popup/popup.html"
+    }
+}
